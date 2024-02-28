@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="'X-UA-Compatible" content="ie=edhe">
+    <title>Nacionalidade</title>
+    
+</head>
+<body>
+    <h1>Classificação de Nacionalidade</h1>
+    País: <input type="caractere" name="txtcowtry" value="" id="txtcowtry" placeholder="Digite seu pais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar () {
+
+            var txtcowtry = window.document.querySelector('input#txtcowtry').value.trim().toLowerCase();
+            var res = window.document.querySelector('div#res') ;
+
+            res.innerHTML = '<p> Seu país de origem é '+ txtcowtry +' </p>';
+
+            res.innerHTML += txtcowtry == 'Brasil' ? '<p>Você é Brasileiro</p>' : '<p>Aproveite sua estadia!</p>' ;
+
+          
+        }
+    </script>
+
+</body>
+</html>
